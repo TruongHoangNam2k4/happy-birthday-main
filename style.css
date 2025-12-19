@@ -1291,11 +1291,12 @@ span::before{
     }
     
     .container .boxcontainer {
-        width: 95%;
+        width: calc(100% - 20px);
         max-width: 600px;
         height: auto;
         min-height: 500px;
         padding: 20px 10px;
+        margin: 0 10px;
     }
     
     .container .image > img {
@@ -1428,11 +1429,11 @@ span::before{
 /* Điện thoại nhỏ */
 @media screen and (max-width: 480px) {
     .container .boxcontainer {
-        width: 100%;
+        width: calc(100% - 20px);
         height: auto;
         min-height: 400px;
-        border-radius: 0;
-        margin: 0;
+        border-radius: 10px;
+        margin: 0 10px;
     }
     
     .container .image > img {
@@ -1632,7 +1633,9 @@ span::before{
 /* Màn hình rất nhỏ (iPhone SE, etc.) */
 @media screen and (max-width: 360px) {
     .container .boxcontainer {
+        width: calc(100% - 20px);
         min-height: 350px;
+        margin: 0 10px;
     }
     
     .container .image > img {
