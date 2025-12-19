@@ -1366,13 +1366,19 @@ span::before{
     }
     
     /* BoxMail responsive */
+    .boxMail {
+        padding: 10px;
+    }
+    
     .boxMail .boxMail-container {
-        width: 90%;
+        width: calc(100% - 20px);
         max-width: 600px;
         height: auto;
         min-height: 400px;
         transform: scale(1);
         flex-direction: column;
+        position: relative;
+        margin: 0 auto;
     }
     
     .boxMail .boxMail-container .card1,
@@ -1381,21 +1387,30 @@ span::before{
         height: auto;
         min-height: 300px;
         position: relative;
-        transform: none;
+        transform: none !important;
         top: auto;
         left: auto;
+        right: auto;
+        border-radius: 0;
     }
     
     .boxMail .boxMail-container .card1 {
         border-radius: 10px 10px 0 0;
+        transform: none !important;
     }
     
     .boxMail .boxMail-container .card2 {
         border-radius: 0 0 10px 10px;
+        transform: none !important;
     }
     
     .boxMail .boxMail-container:hover .card1 {
-        transform: none;
+        transform: none !important;
+    }
+    
+    .boxMail .boxMail-container:hover {
+        transform: none !important;
+        filter: none !important;
     }
     
     .boxMail .boxMail-container .card1 h3 {
@@ -1412,6 +1427,12 @@ span::before{
         font-size: 14px;
         padding: 10px 15px;
         line-height: 1.6;
+    }
+    
+    .boxMail .boxMail-container .card2 .card2-content {
+        overflow-y: auto;
+        max-height: 400px;
+        -webkit-overflow-scrolling: touch;
     }
     
     .boxMail .boxMail-container .card1 .userImg {
@@ -1566,17 +1587,29 @@ span::before{
     }
     
     /* BoxMail cho điện thoại nhỏ */
+    .boxMail {
+        padding: 10px;
+        overflow-y: auto;
+    }
+    
     .boxMail .boxMail-container {
-        width: 95%;
-        max-width: 100%;
+        width: calc(100% - 20px);
+        max-width: calc(100% - 20px);
         height: auto;
         min-height: 350px;
         padding: 0;
+        position: relative;
+        margin: 0 auto;
+        max-height: 90vh;
     }
     
     .boxMail .boxMail-container .card1,
     .boxMail .boxMail-container .card2 {
         min-height: 250px;
+        position: relative !important;
+        transform: none !important;
+        top: auto !important;
+        left: auto !important;
     }
     
     .boxMail .boxMail-container .card1 h3 {
@@ -1595,6 +1628,12 @@ span::before{
         padding: 8px 12px;
         text-indent: 15px;
         line-height: 1.5;
+    }
+    
+    .boxMail .boxMail-container .card2 .card2-content {
+        overflow-y: auto;
+        max-height: 300px;
+        -webkit-overflow-scrolling: touch;
     }
     
     .boxMail .boxMail-container .card1 .userImg {
@@ -1658,6 +1697,15 @@ span::before{
     .boxMail .boxMail-container .card2 h2 {
         font-size: 11px;
     }
+    
+    .boxMail {
+        padding: 10px;
+    }
+    
+    .boxMail .boxMail-container {
+        width: calc(100% - 20px);
+        max-width: calc(100% - 20px);
+    }
 }
 
 /* Landscape mode cho mobile */
@@ -1667,8 +1715,23 @@ span::before{
         min-height: 400px;
     }
     
+    .boxMail {
+        padding: 10px;
+        overflow-y: auto;
+    }
+    
     .boxMail .boxMail-container {
+        width: calc(100% - 20px);
+        max-width: calc(100% - 20px);
         max-height: 90vh;
         overflow-y: auto;
+        position: relative;
+        margin: 0 auto;
+    }
+    
+    .boxMail .boxMail-container .card1,
+    .boxMail .boxMail-container .card2 {
+        position: relative !important;
+        transform: none !important;
     }
 }
